@@ -1,0 +1,34 @@
+.footer {
+  background-color: $raising-black;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    margin: inherit;
+    list-style: none;
+  }
+  &__item {
+    a {
+      font-size: $x-small;
+      color: $gray;
+      padding: 0 2rem;
+    }
+
+    a:hover {
+      color: gray;
+      font-weight: $regular;
+    }
+  }
+  &__right {
+    p {
+      font-size: $x-small;
+      color: $gray;
+      padding-right: 2rem;
+    }
+  }
+}

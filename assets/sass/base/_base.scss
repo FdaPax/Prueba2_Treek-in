@@ -1,0 +1,13 @@
+/* //Define el tamaño al 100% del ancho de la pantalla//
+body {
+    width: 100vw;
+    height: auto;
+} */
+
+/* Sigiendo el patron de diseño responsivo "Mostly Fluid", este @media permite que el diseño se mantenga en pantallas grandes//
+@media only screen and (min-width: 1200px) {
+    body {
+        width: 1200px;
+        margin: 0 auto;
+    }
+} */

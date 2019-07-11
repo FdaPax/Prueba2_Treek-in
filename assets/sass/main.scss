@@ -1,0 +1,29 @@
+// main.scss # Manifest File
+
+// Vendors
+//Bootstrap debe ir primero//
+@import 'vendors/bootstrap_4.3.1/bootstrap';
+
+// abstracts
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// Base
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+
+// Layout
+@import 'layout/price-section';
+@import 'layout/header';
+@import 'layout/main-section';
+@import 'layout/footer';
+@import 'layout/grid';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/navigation';
+// Pages
+// Theme
