@@ -2,15 +2,14 @@
   height: auto;
   &__container {
     position: relative;
-    background-image: url("../../assets/img/bg-price.png");
+    background-image: url("../../assets/img/bg-price.svg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
     height: 98rem;
+    background-size: contain;
   }
   &__title {
     text-align: center;
-    margin-top: 12rem;
+    margin-top: 10rem;
     h4 {
       font-family: $raleway;
       font-weight: $bold;
@@ -18,12 +17,15 @@
     }
   }
   &__container-cards {
+    padding-top: .1rem;
+    padding-bottom: 2rem;
+    background-color: #333745
   }
   &__card-1 {
     width: 20rem;
     background-color: $white;
     height: 35rem;
-    margin: 3rem auto;
+    margin: 4rem auto 5rem auto;
     padding: 2rem;
 
     h6 {
@@ -93,19 +95,36 @@
 @media only screen and (min-width: 768px) {
   .price {
     &__container {
-      height: 53rem;
+      height: 51rem;
+      background-size: cover;
+    }
+    &__title {
+      margin-top: 14rem;
     }
     &__container-cards {
       display: flex;
       justify-content: center;
+      padding-bottom: 0;
     }
     &__card-1 {
-      width: 24rem;
+      width: 23rem;
       height: 32rem;
     }
     &__card-2 {
-      width: 24rem;
+      width: 23rem;
       height: 32rem;
+      margin: 4rem auto;
     }
   }
 }
+@media only screen and (min-width: 768px) {
+  .price{
+    &__card-1 {
+      margin: 4rem 2rem 5rem auto;
+    }
+    &__card-2 {
+      margin: 4rem auto 4rem 1rem;
+    }
+  }
+}
+

@@ -1,6 +1,4 @@
 .main {
-  /*   background-color: forestgreen;
- */
   &__intro {
     width: 77%;
     font-family: "Raleway", sans-serif;
@@ -17,6 +15,12 @@
       font-family: $open-sans;
     }
   }
+  &__photo {
+    margin-bottom: 5rem;
+    img {
+      width: 100vw;
+    }
+  }
   &__title {
     text-align: center;
     h4 {
@@ -26,16 +30,24 @@
   }
   &__graph {
     text-align: center;
-    width: 70%;
+    width: 80%;
     margin: auto;
     padding-top: 3rem;
+    svg {
+      animation-name: opacity;
+      animation-duration: 3s;
+      animation-timing-function: cubic-bezier(0, 0, 1, 1);
+      animation-iteration-count: infinite;
+      animation-fill-mode: backwards;
+    }
   }
   &__content {
     text-align: left;
     margin: auto;
-    width: 77%;
+    width: 20rem;
     font-family: $raleway;
     padding-top: 2rem;
+    padding-bottom: 6rem;
     h6 {
       font-weight: bold;
       letter-spacing: 1px;
@@ -51,9 +63,10 @@
 @media only screen and (min-width: 500px) {
   .main {
     &__intro {
-      width: 75%;
-      top: 2rem;
+      width: 22rem;
+      top: 3rem;
       left: 4rem;
+      padding-right: 2rem;
     }
   }
 }
@@ -61,9 +74,11 @@
 @media only screen and (min-width: 600px) {
   .main {
     &__intro {
-      width: 64%;
-      top: 2rem;
+      width: 28rem;
+      top: 3rem;
       left: 4rem;
+      padding-right: 4rem;
+
     }
   }
 }
@@ -71,23 +86,31 @@
 @media only screen and (min-width: 768px) {
   .main {
     &__intro {
-      width: 59%;
+      width: 28rem;
       position: absolute;
       top: 6rem;
       left: 5rem;
+      padding-right: 4rem;
+    }
+    &__photo {
+      margin-bottom: 4rem;
     }
     &__subcontainer {
       display: flex;
       justify-content: center;
       margin-bottom: 5rem;
+      padding-right: 2rem;
     }
     &__graph {
-      margin-left: 3rem;
+      width: 22rem;
+      margin-left: 10%;
+      padding-top: 0;
     }
     &__content {
+      width: 35rem;
       margin-left: 3rem;
       padding-top: 4rem;
-      padding-right: 2rem;
+      padding-right: 5rem;
     }
   }
 }
@@ -95,10 +118,10 @@
 @media only screen and (min-width: 992px) {
   .main {
     &__intro {
-      width: 35%;
+      width: 28rem;
       position: absolute;
       top: 6rem;
-      left: 7rem;
+      left: 6rem;
     }
   }
 }

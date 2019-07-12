@@ -9655,6 +9655,14 @@ h3 {
     border-color: #dee2e6;
   }
 }
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 10;
+  }
+}
 /* Si se utiliza un mixin, no especificar la unidad de medida*/
 /* Reset*/
 /* Sobreescribir margen del documentos */
@@ -9729,26 +9737,30 @@ body {
 }
 .price__container {
   position: relative;
-  background-image: url("../../assets/img/bg-price.png");
+  background-image: url("../../assets/img/bg-price.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
   height: 98rem;
+  background-size: contain;
 }
 .price__title {
   text-align: center;
-  margin-top: 12rem;
+  margin-top: 10rem;
 }
 .price__title h4 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   color: #E8E8E8;
 }
+.price__container-cards {
+  padding-top: 0.1rem;
+  padding-bottom: 2rem;
+  background-color: #333745;
+}
 .price__card-1 {
   width: 20rem;
   background-color: #FFF;
   height: 35rem;
-  margin: 3rem auto;
+  margin: 4rem auto 5rem auto;
   padding: 2rem;
 }
 .price__card-1 h6 {
@@ -9815,19 +9827,33 @@ body {
 
 @media only screen and (min-width: 768px) {
   .price__container {
-    height: 53rem;
+    height: 51rem;
+    background-size: cover;
+  }
+  .price__title {
+    margin-top: 14rem;
   }
   .price__container-cards {
     display: flex;
     justify-content: center;
+    padding-bottom: 0;
   }
   .price__card-1 {
-    width: 24rem;
+    width: 23rem;
     height: 32rem;
   }
   .price__card-2 {
-    width: 24rem;
+    width: 23rem;
     height: 32rem;
+    margin: 4rem auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .price__card-1 {
+    margin: 4rem 2rem 5rem auto;
+  }
+  .price__card-2 {
+    margin: 4rem auto 4rem 1rem;
   }
 }
 .header {
@@ -9842,10 +9868,6 @@ body {
   .header {
     padding-top: 1rem;
   }
-}
-.main {
-  /*   background-color: forestgreen;
-  */
 }
 .main__intro {
   width: 77%;
@@ -9863,6 +9885,12 @@ body {
   margin-top: 1rem;
   font-family: "Open Sans", sans-serif;
 }
+.main__photo {
+  margin-bottom: 5rem;
+}
+.main__photo img {
+  width: 100vw;
+}
 .main__title {
   text-align: center;
 }
@@ -9872,16 +9900,24 @@ body {
 }
 .main__graph {
   text-align: center;
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding-top: 3rem;
+}
+.main__graph svg {
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
 }
 .main__content {
   text-align: left;
   margin: auto;
-  width: 77%;
+  width: 20rem;
   font-family: "Raleway", sans-serif;
   padding-top: 2rem;
+  padding-bottom: 6rem;
 }
 .main__content h6 {
   font-weight: bold;
@@ -9895,48 +9931,59 @@ body {
 
 @media only screen and (min-width: 500px) {
   .main__intro {
-    width: 75%;
-    top: 2rem;
+    width: 22rem;
+    top: 3rem;
     left: 4rem;
+    padding-right: 2rem;
   }
 }
 @media only screen and (min-width: 600px) {
   .main__intro {
-    width: 64%;
-    top: 2rem;
+    width: 28rem;
+    top: 3rem;
     left: 4rem;
+    padding-right: 4rem;
   }
 }
 @media only screen and (min-width: 768px) {
   .main__intro {
-    width: 59%;
+    width: 28rem;
     position: absolute;
     top: 6rem;
     left: 5rem;
+    padding-right: 4rem;
+  }
+  .main__photo {
+    margin-bottom: 4rem;
   }
   .main__subcontainer {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    padding-right: 2rem;
   }
   .main__graph {
-    margin-left: 3rem;
+    width: 22rem;
+    margin-left: 10%;
+    padding-top: 0;
   }
   .main__content {
+    width: 35rem;
     margin-left: 3rem;
     padding-top: 4rem;
-    padding-right: 2rem;
+    padding-right: 5rem;
   }
 }
 @media only screen and (min-width: 992px) {
   .main__intro {
-    width: 35%;
+    width: 28rem;
     position: absolute;
     top: 6rem;
-    left: 7rem;
+    left: 6rem;
   }
 }
 .footer {
+  padding-top: 4rem;
   background-color: #221D23;
 }
 .footer__container {
@@ -9971,6 +10018,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .footer {
+    margin-top: 3rem;
+  }
   .footer__container {
     display: flex;
     flex-flow: row nowrap;
