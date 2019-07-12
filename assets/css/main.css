@@ -9701,30 +9701,39 @@ h2 {
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 40px;
 }
 
 h4 {
-  font-size: 2.2rem;
+  font-size: 35px;
 }
 
 h5 {
-  font-size: 1.8rem;
+  font-size: 30px;
 }
 
 h6 {
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 
 p {
   font-size: 1rem;
 }
 
-/* //Define el tamaño al 100% del ancho de la pantalla//
 body {
-    width: 100vw;
-    height: auto;
-} */
+  width: 100vw;
+  height: auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 10;
+  }
+}
 /* Sigiendo el patron de diseño responsivo "Mostly Fluid", este @media permite que el diseño se mantenga en pantallas grandes//
 @media only screen and (min-width: 1200px) {
     body {
