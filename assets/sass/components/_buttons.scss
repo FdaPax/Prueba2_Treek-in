@@ -1,23 +1,53 @@
 /* Base */
-/* .button {
-  padding: 1rem 4rem;
+.button {
   cursor: pointer; //muestra un dedo en el cursor//
-  font-family: $roboto;
-  font-size: $medium;
+  font-family: $raleway;
   font-weight: $bold;
-} */
+  letter-spacing: 1px;
+  color: $white;
+  background-color: $ball-blue;
+  &--large-size {
+    padding: 0.8rem 4.9rem;
+    font-size: $medium;
+    border: none;
+    width: 16rem;
+    &:hover {
+      //cuando el usuario pasa por arriba//
+      background-color: $middle-blue;
+    }
+    &:focus {
+      //cuando es seleccionado//
+      background-color: $silver-chalice;
+    }
+  }
+}
 
 /* Button Scheme */
-/* .button_primary {
+.button_primary {
+  font-size: $x-small;
+  padding: 0.4rem 0.8rem;
   border: none; //resetear boton//
-  color: $white;
-  background-color: $blue-bell;
   &:hover {
     //cuando el usuario pasa por arriba//
-    background-color: $pale-lavander;
+    background-color: $middle-blue;
   }
   &:focus {
     //cuando es seleccionado//
-    background-color: $gray;
+    background-color: $silver-chalice;
   }
-} */
+}
+
+@media only screen and (max-width: 768px) {
+  .button_primary {
+    display: block;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .button {
+    &--large-size {
+      width: 20rem;
+    }
+  }
+}

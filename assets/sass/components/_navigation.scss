@@ -1,92 +1,126 @@
 .navigation {
+  position: relative;
+  margin: 0.5rem;
+
+  &__logo {
+    position: absolute;
+    margin-left: 2rem;
+    width: 38px;
+  }
+
+  &__container {
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    a {
+      display: block;
+      text-align: left;
+      text-decoration: none;
+      font-size: $x-small;
+      color: $onyx;
+      margin: 1rem;
+      font-weight: $regular;
+      letter-spacing: 1px;
+    }
+
+    a:hover {
+      color: gray;
+      font-weight: $regular;
+    }
+  }
+  &__right {
+    text-align: left;
     position: relative;
-    margin: 0.5rem;
-  
+    left: 2.4rem;
+    a {
+      font-size: $x-small;
+      color: $onyx;
+      margin: 1rem;
+      letter-spacing: 1px;
+      text-decoration: none;
+    }
+  }
+}
+
+.collapsible {
+  text-align: right;
+
+  label {
+    display: block;
+    font-size: $small;
+    margin-right: 2rem;
+  }
+}
+
+#menu {
+  display: none;
+}
+
+input:checked ~ .navigation__container {
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .navigation {
+    margin: 0;
     &__logo {
       position: absolute;
+      margin-left: 3rem;
     }
-  
+
     &__container {
-      max-height: 0;
-      padding: 0;
-      overflow: hidden;
+      max-height: 100%;
+      overflow: visible;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 3rem;
+      margin-right: 4rem;
     }
-  
+
     &__list {
-      list-style: none;
+      display: inline-flex;
     }
-  
+
     &__item {
       a {
-        display: block;
-        text-align: left;
-        font-size: $small;
-        font-weight: $bold;
-        color: black;
+        font-size: $x-small;
+        color: $onyx;
+        margin: 1rem;
+        font-weight: $regular;
+        letter-spacing: 1px;
+      }
+
+      a:hover {
+        color: $spanish-gray;
+        font-weight: $regular;
+      }
+    }
+    &__right {
+      padding-top: 0.7rem;
+      a {
+        font-size: $x-small;
+        color: $onyx;
+        margin: 1rem;
+        letter-spacing: 1px;
         text-decoration: none;
       }
-  
       a:hover {
-        color: gray;
+        color: $spanish-gray;
         font-weight: $regular;
       }
     }
   }
-  
-  .collapsible {
-    text-align: right;
-  
-    label {
-      display: block;
-      font-size: $small;
-    }
-  }
-  
-  #menu {
-    display: none;
-  }
-  
-  input:checked ~ .navigation__container {
-    max-height: 100%;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .navigation {
-      margin: 0;
-      &__logo {
-        position: absolute;
-      }
 
-  
-      &__container {
-        max-height: 100%;
-        overflow: visible;
-      }
-  
-      &__list {
-        display: flex;
-        justify-content: flex-end;
-        margin: inherit;
-      }
-  
-      &__item {
-        a {
-          font-size: $medium;
-          font-weight: $bold;
-          color: black;
-        }
-  
-        a:hover {
-          color: gray;
-          font-weight: $regular;
-        }
-      }
-    }
-  
-    .collapsible {
-      label {
-        display: none;
-      }
+  .collapsible {
+    label {
+      display: none;
     }
   }
-  
+}

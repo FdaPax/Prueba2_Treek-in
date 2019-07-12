@@ -12,23 +12,23 @@ p {
 /* Mixin conversor de medida*/
 //Hay que cambiar el cuarto valor $target dependiendo el proyecto//
 h1 {
-  @include relative-converter(font-size, rem, $xxxx-large, 16);
+  font-size: $xxxxx-large;
 }
 h2 {
-  @include relative-converter(font-size, rem, $xxx-large, 16);
+  font-size: $xxxx-large;
 }
 h3 {
-  @include relative-converter(font-size, rem, $xx-large, 16);
+  font-size: $xxx-large;
 }
 h4 {
-  @include relative-converter(font-size, rem, $x-large, 16);
+  font-size: $xx-large;
 }
 h5 {
-  @include relative-converter(font-size, rem, $large, 16);
+  font-size: $x-large;
 }
 h6 {
-  @include relative-converter(font-size, rem, $medium, 16);
+  font-size: $large;
 }
 p {
-  @include relative-converter(font-size, rem, $small, 16);
+  font-size: $medium;
 }

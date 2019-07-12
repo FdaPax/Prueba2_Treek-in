@@ -1,0 +1,111 @@
+.price {
+  height: auto;
+  &__container {
+    position: relative;
+    background-image: url("../../assets/img/bg-price.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 98rem;
+  }
+  &__title {
+    text-align: center;
+    margin-top: 12rem;
+    h4 {
+      font-family: $raleway;
+      font-weight: $bold;
+      color: $platinum;
+    }
+  }
+  &__container-cards {
+  }
+  &__card-1 {
+    width: 20rem;
+    background-color: $white;
+    height: 35rem;
+    margin: 3rem auto;
+    padding: 2rem;
+
+    h6 {
+      font-family: $open-sans;
+    }
+    h3 {
+      margin: 1rem 0rem;
+      font-family: $raleway;
+      font-weight: $bold;
+    }
+    hr {
+      margin-top: 1.7rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid gray;
+    }
+    ul {
+      padding-top: 0.3rem;
+      padding-bottom: 8rem;
+      font-family: $open-sans;
+      font-size: 1rem;
+    }
+    li {
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+  &__card-2 {
+    width: 20rem;
+    background-color: $white;
+    height: 39.5rem;
+    margin: 3rem auto;
+    padding: 2rem;
+
+    h6 {
+      font-family: $open-sans;
+    }
+    h3 {
+      margin: 1rem 0rem;
+      font-family: $raleway;
+      font-weight: $bold;
+    }
+    hr {
+      margin-top: 1.7rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid gray;
+    }
+    ul {
+      font-family: $open-sans;
+      font-size: 1rem;
+      padding-top: 0.1rem;
+      padding-bottom: 0.5rem;
+    }
+    li {
+      margin-top: 1rem;
+    }
+    button {
+      margin-top: 0.8rem;
+      font-size: 1rem;
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .price {
+    &__container {
+      height: 53rem;
+    }
+    &__container-cards {
+      display: flex;
+      justify-content: center;
+    }
+    &__card-1 {
+      width: 24rem;
+      height: 32rem;
+    }
+    &__card-2 {
+      width: 24rem;
+      height: 32rem;
+    }
+  }
+}

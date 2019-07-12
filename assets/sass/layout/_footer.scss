@@ -2,21 +2,21 @@
   background-color: $raising-black;
   &__container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
+    flex-flow: column nowrap;
+    justify-content: center;
   }
   &__list {
-    display: flex;
-    justify-content: flex-end;
-    margin: inherit;
     list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 0;
   }
   &__item {
     a {
       font-size: $x-small;
       color: $gray;
-      padding: 0 2rem;
+      padding: 0 1.5rem;
     }
 
     a:hover {
@@ -25,10 +25,32 @@
     }
   }
   &__right {
+    padding-bottom: 2rem;
+    margin: auto;
+    padding-top: .5rem;
     p {
       font-size: $x-small;
       color: $gray;
-      padding-right: 2rem;
     }
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    &__container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+    }
+    &__list {
+      padding-top: 1.5rem;
+    }
+    &__right {
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      margin: 0;
+      margin-right: 2rem;
+    }
+  }
+}
+

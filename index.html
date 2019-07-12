@@ -40,8 +40,8 @@
                         <li class="navigation__item"><a href="#">Precios</a></li>
                     </ul>
                     <div class="navigation__right">
-                        <button>Iniciar sesión</button>
-                        <button>Regístrate</button>
+                        <a href="#">Iniciar Sesión</a>
+                        <button class="button button_primary">Regístrate</button>
                     </div>
                 </div>
             </div>
@@ -49,54 +49,80 @@
     </header>
 
     <main class="main row">
-        <div class="main__container-top col-md-12">
-            <div class="main__text">
+        <div class="main__container col-xs-12">
+            <div class="main__intro">
                 <h4>Haz Trekking sin Parar</h1>
-                    <p>Con Trekk-in te despreocuparas de la estimación de tu viaje, ya que con unos simples pasos podrás
+                    <p>Con Trekk-in te despreocuparás de la estimación de tu viaje, ya que con unos simples pasos podrás
                         definir la mejor ruta a tomar con tus compañeros de expedición.</h3>
             </div>
-            <div class="main__photo ">
+            <div class="main__photo col-xs-12">
                 <img src="assets/img/bg-hero.svg" alt="photo">
             </div>
         </div>
-        <div class="main__title col-md-12">
-            <div><h5>Características</h5></div>
-            
+        <div class="main__title col-xs-12">
+            <h4>Características</h4>
         </div>
-        <div class="main__container-bottom col-md-12">
-
-            <div class="main__graph ">
+        <div class="div main__subcontainer col-xs-12">
+            <div class="main__graph col-xs-12">
                 <img src="assets/img/bar-graph.svg" alt="graphic">
             </div>
-            <div class="main__content col-md-4">
+            <div class="main__content col-xs-12">
                 <h6>Estadísticas de tu progreso</h6>
                 <p>Lorem ipsum dolor sit amet consectetur adipscing elit venenatis nec orci, viverra turpis himanaeos
                     per sollicitudin facilisis dictum tempor sem, vel porta socioqu felis fusce nam nascetur libero
                     ligula.</p>
             </div>
         </div>
+
     </main>
 
-    <section class="price">
-        <div class="row">
-        <div class="price__container col-md-12">
-            <img src="assets/img/bg-price.svg" alt="price">
-        </div>
-    </div>
-    </section>
-
-    <footer class="footer">
-            <div class="footer__container">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="#">Legal</a></li>
-                        <li class="footer__item"><a href="#">Cookies</a></li>
-                        <li class="footer__item"><a href="#">Sobre anuncios</a></li>
+    <section class="price row">
+        <div class="price__container col-xs-12">
+            <div class="price__title col-xs-12">
+                <h4>Precios</h4>
+            </div>
+            <div class="price__container-cards">
+                <div class="price__card-1 col-xs-12">
+                    <h6>Trek-in Free</h6>
+                    <h3>$ 0 / mes</h3>
+                    <hr>
+                    <ul>
+                        <li>Ver mapas creado por usuarios</li>
+                        <li>Concretar con otros usuarios</li>
                     </ul>
-                    <div class="footer__right">
-                            <p>@ 2018 Trekk-in SPA.</p>
-                    </div>
-                
+                    <hr>
+                    <button class="button button--large-size">Obtén Free</button>
                 </div>
+                <div class="price__card-2 col-xs-12">
+                    <h6>Trek-in Premium</h6>
+                    <h3>$ 3500 / mes</h3>
+                    <hr>
+                    <ul>
+                        <li>Ver mapas creado por usuarios</li>
+                        <li>Concretar con otros usuarios</li>
+                        <li>Definir mejores rutas</li>
+                        <li>Mapas Offline</li>
+                        <li>Integración con otras aplicaciones</li>
+                    </ul>
+                    <hr>
+                    <button class="button button--large-size">Obtén Free</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#">Legal</a></li>
+                <li class="footer__item"><a href="#">Cookies</a></li>
+                <li class="footer__item"><a href="#">Sobre anuncios</a></li>
+            </ul>
+            <div class="footer__right">
+                <p>@ 2018 Trekk-in SPA.</p>
+            </div>
+
+        </div>
     </footer>
 
     <!--Dependencias de JavaScript para Bootstrap -->
